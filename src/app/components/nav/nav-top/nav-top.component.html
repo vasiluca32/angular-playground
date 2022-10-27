@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="logo-wrapper">
+    <a href="https://www.google.com" class="logo">
+      <img
+        class="brand-logo"
+        src="https://bootstrapdash.com/demo/flare/template/images/logo.svg"
+        alt="Logo"
+      />
+    </a>
+  </div>
+  <div class="menu-actions">
+    <form>
+      <div class="input-wrapper">
+        <input
+          #inputText
+          [formControl]="control"
+          [type]="type"
+          class="input"
+          [placeholder]="placeholder"
+          (keydown.enter)="handleKey($event)"
+        />
+        <fa-icon
+          class="icon"
+          [icon]="faSearch"
+          (click)="handleClick()"
+        ></fa-icon>
+      </div>
+    </form>
+    <ul>
+      <li>
+        <a href="#">
+          <fa-icon class="icon" [icon]="faBell"></fa-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <fa-icon class="icon sliders" [icon]="faSliders"></fa-icon>
+        </a>
+      </li>
+      <li>
+        <span>Hello Andre Rivera</span>
+        <img
+          class="profile-pic"
+          src="https://bootstrapdash.com/demo/flare/template/images/faces/face1.jpg"
+          alt="Profile pic"
+        />
+      </li>
+    </ul>
+  </div>
+</div>

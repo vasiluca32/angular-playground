@@ -1,0 +1,28 @@
+.container {
+    padding: 0 12%;
+    background-color: #fff;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+li:hover a {
+    color: #0766c6;
+    transition: color 1s ease;
+}
+
+li:first-child a {
+    padding-left: 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 22px 10px;
+    display: block;
+}

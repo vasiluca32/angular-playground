@@ -1,0 +1,12 @@
+<div class="container">
+  <ul>
+    <li
+      *ngFor="let info of data"
+      (mouseenter)="myFunction()"
+      (mouseleave)="myFunction2()"
+    >
+      <a href="#">{{ info.title }}</a>
+    </li>
+  </ul>
+</div>
+<app-dropdown *ngIf="hover"></app-dropdown>

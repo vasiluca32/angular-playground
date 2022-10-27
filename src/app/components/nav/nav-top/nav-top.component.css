@@ -1,0 +1,109 @@
+.container {
+    background-color: #00b297;
+    padding: 0 12%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    display: block;
+}
+
+.brand-logo {
+    max-width: 118px;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.input-wrapper {
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: 80%;
+    background: transparent;
+    border: none;
+    font-size: 0.75rem;
+    padding: 0.56rem 0.75rem;
+    line-height: 14px;
+    font-weight: 300;
+    color: #FFF;
+
+}
+
+.input::placeholder {
+    color: #FFF;
+}
+
+.input:focus-visible {
+    outline: none;
+}
+
+form {
+    margin-right: 12px;
+}
+
+form .icon {
+    color: white;
+    margin-left: 5px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+ul .icon {
+    color: white;
+    margin: 0 1px;
+}
+
+
+li {
+    margin: 0 12px;
+}
+
+li:nth-child(-n+2) {
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    padding: 10px;
+
+}
+
+li:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.sliders svg {
+    transform: rotateZ(90deg) !important;
+    display: none;
+}
+
+li span {
+    color: #fff;
+    font-size: 13px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    max-width: 34px;
+    margin-left: 0.75rem;
+}
