@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
+import { DropdownComponent } from '../components/nav/dropdown/dropdown.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NavBottomLinksService {
+
 
   links: string[] = ["Dashboard", 'Widgets', 'UI Elements', "Forms", "Data", "Pages", "Apps", "Documentation"]
 
@@ -78,10 +80,39 @@ export class NavBottomLinksService {
     }
   ]
 
-  constructor() { }
+  constructor(private dropdown: DropdownComponent) { }
 
   getLinks() {
-    return this.links2
+    return this.links2;
   }
+
+  getData(param: string) {
+
+    let myObject: any = '';
+    let subcategory: any = '';
+    let title: string = '';
+    let sublinks: Array<any> = [];
+
+    this.links2.forEach(element => {
+      for (const [key, value] of Object.entries(element)) {
+        if (value === param) {
+          myObject = element
+          title = myObject.title;
+        }
+      }
+    });
+
+
+    if (myObject.subcategory.length > 0) {
+      subcategory = [...myObject.subcategory]
+    } else {
+      return
+    }
+
+    this.dropdown.toRender(title, subcategory)
+
+
+  }
+
 
 }

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { NavBottomLinksService } from 'src/app/services/nav-bottom-links.service';
+import { DropdownComponent } from '../dropdown/dropdown.component';
 
 @Component({
   selector: 'app-nav-bottom',
   templateUrl: './nav-bottom.component.html',
   styleUrls: ['./nav-bottom.component.css'],
-  providers: [NavBottomLinksService]
+  providers: [NavBottomLinksService, DropdownComponent]
 })
 export class NavBottomComponent implements OnInit {
 
@@ -15,13 +16,12 @@ export class NavBottomComponent implements OnInit {
   constructor(private linkService: NavBottomLinksService) { }
 
   ngOnInit(): void {
-
     this.data = this.linkService.getLinks()
-    console.log(this.data)
   }
 
-  myFunction() {
+  myFunction(event: Event | any) {
     this.hover = true
+    this.linkService.getData(event.target.innerText)
   }
 
   myFunction2() {

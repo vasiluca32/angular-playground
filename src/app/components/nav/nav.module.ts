@@ -23,7 +23,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
   exports: [
     NavComponent,
     NavBottomComponent,
-    NavTopComponent,
+    NavTopComponent
   ]
 })
 export class NavModule { }

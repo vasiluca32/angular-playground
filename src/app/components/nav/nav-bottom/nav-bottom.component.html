@@ -2,7 +2,7 @@
   <ul>
     <li
       *ngFor="let info of data"
-      (mouseenter)="myFunction()"
+      (mouseenter)="myFunction($event)"
       (mouseleave)="myFunction2()"
     >
       <a href="#">{{ info.title }}</a>
