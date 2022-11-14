@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavBottomLinksService } from 'src/app/services/nav-bottom-links.service';
 import { DropdownComponent } from '../dropdown/dropdown.component';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav-bottom',
@@ -9,9 +10,9 @@ import { DropdownComponent } from '../dropdown/dropdown.component';
   providers: [NavBottomLinksService, DropdownComponent]
 })
 export class NavBottomComponent implements OnInit {
-
+  angleDown = faAngleDown
   data: any = [];
-  hover: boolean = false;
+  activeTitle: string = '';
 
   constructor(private linkService: NavBottomLinksService) { }
 
@@ -19,12 +20,8 @@ export class NavBottomComponent implements OnInit {
     this.data = this.linkService.getLinks()
   }
 
-  myFunction(event: Event | any) {
-    this.hover = true
-    this.linkService.getData(event.target.innerText)
+  setActiveTitle(title: string) {
+    this.activeTitle = title
   }
 
-  myFunction2() {
-    this.hover = false
-  }
 }

@@ -1,1 +1,8 @@
-<p>{{ title1 }}</p>
+<ul *ngFor="let item of subcategory" class="dropdown">
+  <p>
+    {{ item.title }}
+  </p>
+  <li *ngFor="let link of item.sublinks">
+    <a routerLink="{{ link | lowercase }}">{{ link }}</a>
+  </li>
+</ul>

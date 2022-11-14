@@ -6,6 +6,7 @@ import { NavComponent } from './nav/nav.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -14,11 +15,14 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     NavComponent,
     NavBottomComponent,
     NavTopComponent,
-    DropdownComponent],
+    DropdownComponent,
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule
+
   ],
   exports: [
     NavComponent,

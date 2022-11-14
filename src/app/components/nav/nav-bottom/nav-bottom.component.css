@@ -9,9 +9,17 @@ ul {
     justify-content: space-between;
 }
 
+li {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
 li:hover a {
     color: #0766c6;
     transition: color 1s ease;
+
+
 }
 
 li:first-child a {
@@ -25,4 +33,12 @@ a {
     font-weight: 700;
     padding: 22px 10px;
     display: block;
+}
+
+.dropdown {
+    position: absolute;
+    top: 60px;
+    border: 2px solid red;
+    width: 100px;
+    background-color: #fff;
 }

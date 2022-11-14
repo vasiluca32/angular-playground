@@ -2,11 +2,22 @@
   <ul>
     <li
       *ngFor="let info of data"
-      (mouseenter)="myFunction($event)"
-      (mouseleave)="myFunction2()"
+      (mouseenter)="setActiveTitle(info.title)"
+      (mouseleave)="setActiveTitle('')"
     >
-      <a href="#">{{ info.title }}</a>
+      <a class="link" routerLink="{{ info.title | lowercase }}">{{
+        info.title
+      }}</a>
+      <fa-icon
+        *ngIf="info.subcategory.length > 0"
+        [icon]="angleDown"
+        class="icon"
+      ></fa-icon>
+      <app-dropdown
+        class="dropdown"
+        *ngIf="activeTitle === info.title"
+        [subcategory]="info.subcategory"
+      ></app-dropdown>
     </li>
   </ul>
 </div>
-<app-dropdown *ngIf="hover"></app-dropdown>
