@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.icon::before {
+    font-size: 40px;
+}

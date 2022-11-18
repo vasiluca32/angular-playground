@@ -1,5 +1,9 @@
-<p>home works!</p>
-<app-stat></app-stat>
-<app-stat></app-stat>
-<app-stat></app-stat>
-<app-stat></app-stat>
+<div class="wrapper">
+  <app-stat
+    *ngFor="let item of info"
+    [icon]="item.icon"
+    [title]="item.title"
+    [stat]="item.statistic"
+    [trend]="item.trend"
+  ></app-stat>
+</div>

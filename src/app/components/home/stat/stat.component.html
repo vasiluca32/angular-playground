@@ -1,1 +1,8 @@
-<p>stat works!</p>
+<div class="container" [ngStyle]="{ 'background-color': color }">
+  <i class="icon {{ icon }}"></i>
+  <div class="text-wrapper">
+    <p>{{ title }}</p>
+    <p>{{ stat }}</p>
+    <p>{{ trend }}</p>
+  </div>
+</div>

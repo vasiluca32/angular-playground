@@ -22,7 +22,7 @@ const routes: Routes = [
     component: WidgetsComponent
   },
   {
-    path: 'ui elements',
+    path: 'ui-elements',
     component: UiElementsComponent,
     children: [
       {

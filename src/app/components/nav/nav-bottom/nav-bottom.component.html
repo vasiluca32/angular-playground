@@ -14,10 +14,11 @@
         class="icon"
       ></fa-icon>
       <app-dropdown
+        *ngIf="activeTitle === info.title && info.subcategory.length > 0"
         class="dropdown"
-        *ngIf="activeTitle === info.title"
         [subcategory]="info.subcategory"
       ></app-dropdown>
     </li>
   </ul>
 </div>
+<!-- *ngIf="activeTitle === info.title" -->

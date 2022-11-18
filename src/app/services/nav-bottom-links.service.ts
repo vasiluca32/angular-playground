@@ -16,7 +16,7 @@ export class NavBottomLinksService {
       "subcategory": []
     },
     {
-      "title": "UI Elements",
+      "title": "UI-Elements",
       "subcategory": [
         {
           "title": "Basic Elements",
@@ -70,10 +70,7 @@ export class NavBottomLinksService {
     },
     {
       "title": "Documentation",
-      "subcategory": [{
-        "title": "",
-        "sublinks": []
-      }]
+      "subcategory": []
     }
   ]
 

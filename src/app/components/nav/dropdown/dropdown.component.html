@@ -1,5 +1,5 @@
 <ul *ngFor="let item of subcategory" class="dropdown">
-  <p>
+  <p *ngIf="item.title">
     {{ item.title }}
   </p>
   <li *ngFor="let link of item.sublinks">
