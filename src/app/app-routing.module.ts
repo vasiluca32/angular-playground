@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './components/home/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { AccordionComponent } from './components/ui-elements/accordion/accordion.component';
 import { UiElementsComponent } from './components/ui-elements/ui-elements.component';
+import { AccordionComponent } from './components/ui-elements/accordion/accordion.component';
 import { WidgetsComponent } from './components/widgets/widgets.component';
 
 const routes: Routes = [
@@ -30,6 +30,10 @@ const routes: Routes = [
         component: AccordionComponent
       }
     ]
+  },
+  {
+    path: 'accordion',
+    component: AccordionComponent
   },
   {
     path: '**',

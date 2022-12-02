@@ -5,9 +5,12 @@
       (mouseenter)="setActiveTitle(info.title)"
       (mouseleave)="setActiveTitle('')"
     >
-      <a class="link" routerLink="{{ info.title | lowercase }}">{{
-        info.title
-      }}</a>
+      <a
+        class="link"
+        routerLink="{{ info.title | lowercase }}"
+        [ngClass]="{ active: info.title === activeTitle }"
+        >{{ info.title }}</a
+      >
       <fa-icon
         *ngIf="info.subcategory.length > 0"
         [icon]="angleDown"

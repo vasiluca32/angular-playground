@@ -38,6 +38,10 @@ a {
     display: block;
 }
 
+.link.active {
+    color: #0766c6;
+}
+
 .dropdown {
     display: flex;
     position: absolute;
