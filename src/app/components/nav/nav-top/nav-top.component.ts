@@ -1,20 +1,25 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, EventEmitter, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faSliders } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { NavBottomComponent } from '../nav-bottom/nav-bottom.component';
+import { NavToggleService } from 'src/app/services/nav-toggle.service';
 
 
 @Component({
   selector: 'app-nav-top',
   templateUrl: './nav-top.component.html',
-  styleUrls: ['./nav-top.component.css']
+  styleUrls: ['./nav-top.component.css'],
+  providers: [NavBottomComponent]
 })
 export class NavTopComponent implements OnInit {
   myText = ''
   faSearch = faSearch;
   faBell = faBell;
   faSliders = faSliders;
+  faMenu = faBars;
 
   @Input() control: FormControl = new FormControl()
   @Input() type = 'text'
@@ -22,7 +27,9 @@ export class NavTopComponent implements OnInit {
   @Input() format = ''
   @ViewChild('inputText') inputText: any;
 
-  constructor() {
+  toggle: any;
+
+  constructor(private toggleService: NavToggleService) {
 
   }
 
@@ -41,5 +48,18 @@ export class NavTopComponent implements OnInit {
     alert(this.myText)
     this.inputText.nativeElement.value = ''
   }
+
+  toggleMenu() {
+
+    if (this.toggle === true) {
+      this.toggle = false;
+    }
+    else {
+      this.toggle = true;
+    }
+    this.toggleService.transmitData(this.toggle);
+
+  }
+
 
 }

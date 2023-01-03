@@ -1,11 +1,17 @@
 <div class="container">
   <div class="logo-wrapper">
     <a routerLink="/" class="logo">
-      <img
-        class="brand-logo"
-        src="https://bootstrapdash.com/demo/flare/template/images/logo.svg"
-        alt="Logo"
-      />
+      <picture>
+        <source
+          media="(min-width:768px)"
+          srcset="https://bootstrapdash.com/demo/flare/template/images/logo.svg"
+        />
+        <img
+          class="brand-logo"
+          src="https://bootstrapdash.com/demo/flare/template/images/logo-mini.svg"
+          alt="Logo"
+        />
+      </picture>
     </a>
   </div>
   <div class="menu-actions">
@@ -48,6 +54,13 @@
           src="https://bootstrapdash.com/demo/flare/template/images/faces/face1.jpg"
           alt="Profile pic"
         />
+      </li>
+      <li class="burger-wrapper">
+        <fa-icon
+          class="icon burger"
+          [icon]="faMenu"
+          (click)="toggleMenu()"
+        ></fa-icon>
       </li>
     </ul>
   </div>

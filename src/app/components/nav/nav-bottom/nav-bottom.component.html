@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="this.toggleStatus">
   <ul>
     <li
       *ngFor="let info of data"
@@ -24,4 +24,3 @@
     </li>
   </ul>
 </div>
-<!-- *ngIf="activeTitle === info.title" -->

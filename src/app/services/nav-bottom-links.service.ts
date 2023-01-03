@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { DropdownComponent } from '../components/nav/dropdown/dropdown.component';
 
 @Injectable({
   providedIn: 'root'

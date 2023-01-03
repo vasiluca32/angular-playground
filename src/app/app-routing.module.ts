@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UiElementsComponent } from './components/ui-elements/ui-elements.component';
@@ -15,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: HomeComponent
   },
   {
     path: 'widgets',
