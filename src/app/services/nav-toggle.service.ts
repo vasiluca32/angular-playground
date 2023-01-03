@@ -6,9 +6,15 @@ import { Subject } from 'rxjs';
 })
 export class NavToggleService {
   sendData = new Subject();
+  getData = new Subject();
   constructor() { }
 
   transmitData(tog: any) {
     this.sendData.next(tog);
   }
+
+  getRes(res: any) {
+    this.getData.next(res);
+  }
 }
+

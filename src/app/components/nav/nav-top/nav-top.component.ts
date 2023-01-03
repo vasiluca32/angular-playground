@@ -27,13 +27,17 @@ export class NavTopComponent implements OnInit {
   @Input() format = ''
   @ViewChild('inputText') inputText: any;
 
-  toggle: any;
+  toggle: any = false;
 
   constructor(private toggleService: NavToggleService) {
 
   }
 
   ngOnInit(): void {
+    this.toggleService.getData.subscribe(res => {
+      this.toggle = res
+      this.toggleMenu()
+    })
   }
 
   handleClick() {

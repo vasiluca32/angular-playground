@@ -16,7 +16,7 @@ export class NavBottomComponent implements OnInit {
   data: any = [];
   activeTitle: string = '';
 
-  toggleStatus: any = true;
+  toggleStatus: any;
   innerWidth: any;
 
   constructor(private linkService: NavBottomLinksService, private toggleService: NavToggleService) { }
@@ -26,7 +26,7 @@ export class NavBottomComponent implements OnInit {
     this.toggleService.sendData.subscribe(tog => {
       this.toggleStatus = tog
     })
-    this.innerWidth = window.innerWidth
+
   }
 
   @HostListener('window:resize')

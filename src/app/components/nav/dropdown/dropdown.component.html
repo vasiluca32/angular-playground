@@ -3,6 +3,8 @@
     {{ item.title }}
   </p>
   <li *ngFor="let link of item.sublinks">
-    <a routerLink="{{ link | lowercase }}">{{ link }}</a>
+    <a routerLink="{{ link | lowercase }}" (click)="sendResponse()">{{
+      link
+    }}</a>
   </li>
 </ul>
