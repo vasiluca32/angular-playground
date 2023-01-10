@@ -1,0 +1,40 @@
+<form [formGroup]="defaultForm" (ngSubmit)="displayValues()">
+  <h3>Default form</h3>
+  <h4>Basic form layout</h4>
+  <div class="input-wrapper">
+    <label class="label"
+      >Username <br />
+      <input [formControl]="username" placeholder="Username" type="text" />
+    </label>
+  </div>
+  <div class="input-wrapper">
+    <label class="label"
+      >Email address <br />
+      <input [formControl]="email" placeholder="Email" type="email" />
+    </label>
+  </div>
+  <div class="input-wrapper">
+    <label class="label"
+      >Password <br />
+      <input [formControl]="password" type="password" placeholder="Password" />
+    </label>
+  </div>
+  <div class="input-wrapper">
+    <label class="label"
+      >Confirm Password <br />
+      <input
+        [formControl]="confirm_password"
+        type="password"
+        placeholder="Password"
+      />
+    </label>
+  </div>
+  <div class="input-wrapper radio-wrap">
+    <input type="radio" id="radio" />
+    <label class="label radio" for="radio">Remember me </label>
+  </div>
+  <div class="button-wrapper">
+    <button type="submit" [disabled]="defaultForm.invalid">Submit</button>
+    <button type="button" (click)="this.defaultForm.reset()">Cancel</button>
+  </div>
+</form>

@@ -13,8 +13,7 @@ import { HomeComponent } from './home/home.component';
     FontAwesomeModule
   ],
   exports: [
-    StatComponent,
-    HomeComponent
+
   ]
 })
 export class HomeModule { }

@@ -25,9 +25,7 @@ import { RouterModule } from '@angular/router';
 
   ],
   exports: [
-    NavComponent,
-    NavBottomComponent,
-    NavTopComponent
+    NavComponent
   ]
 })
 export class NavModule { }

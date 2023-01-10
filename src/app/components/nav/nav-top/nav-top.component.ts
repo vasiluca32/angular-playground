@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
@@ -27,17 +27,17 @@ export class NavTopComponent implements OnInit {
   @Input() format = ''
   @ViewChild('inputText') inputText: any;
 
-  toggle: any = false;
+  toggle: any;
 
   constructor(private toggleService: NavToggleService) {
 
   }
 
   ngOnInit(): void {
-    this.toggleService.getData.subscribe(res => {
-      this.toggle = res
-      this.toggleMenu()
-    })
+    // this.toggleService.getData.subscribe(res => {
+    //   this.toggle = res
+    //   this.toggleMenu()
+    // })
   }
 
   handleClick() {

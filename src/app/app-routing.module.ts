@@ -5,6 +5,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UiElementsComponent } from './components/ui-elements/ui-elements.component';
 import { AccordionComponent } from './components/ui-elements/accordion/accordion.component';
 import { WidgetsComponent } from './components/widgets/widgets.component';
+import { FormsComponent } from './components/forms/forms/forms.component';
 
 const routes: Routes = [
 
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: 'accordion',
     component: AccordionComponent
+  },
+  {
+    path: 'basic elements',
+    component: FormsComponent
   },
   {
     path: '**',

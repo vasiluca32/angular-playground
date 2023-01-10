@@ -9,6 +9,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UiElementsComponent } from './components/ui-elements/ui-elements.component';
 import { AccordionComponent } from './components/ui-elements/accordion/accordion.component';
 import { HomeModule } from './components/home/home.module';
+import { MyFormsModule } from './components/forms/forms.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HomeModule } from './components/home/home.module';
     BrowserModule,
     NavModule,
     HomeModule,
+    MyFormsModule,
     AppRoutingModule
   ],
   providers: [],

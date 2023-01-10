@@ -1,0 +1,64 @@
+<form #horizontalForm="ngForm" (ngSubmit)="displayValues()">
+  <h3>Horizontal form</h3>
+  <h4>Horizontal form layout</h4>
+  <div class="input-wrapper">
+    <label class="label"> Username </label>
+    <input
+      #username="ngModel"
+      name="username"
+      [(ngModel)]="credentials.username"
+      required
+      type="text"
+      placeholder="Username"
+    />
+  </div>
+  <div class="input-wrapper">
+    <label class="label"> Email </label>
+    <input
+      #email="ngModel"
+      name="email"
+      [(ngModel)]="credentials.email"
+      required
+      email
+      placeholder="Email"
+    />
+  </div>
+  <div class="input-wrapper">
+    <label class="label"> Mobile </label>
+    <input
+      #mobile="ngModel"
+      [(ngModel)]="credentials.mobile"
+      required
+      type="number"
+      placeholder="Mobile number"
+    />
+  </div>
+  <div class="input-wrapper">
+    <label class="password"> Password </label>
+    <input
+      #password="ngModel"
+      [(ngModel)]="credentials.password"
+      required
+      type="password"
+      placeholder="Username"
+    />
+  </div>
+  <div class="input-wrapper">
+    <label class="password"> Re Password </label>
+    <input
+      #password_confirm="ngModel"
+      [(ngModel)]="credentials.password_confirm"
+      required
+      type="password"
+      placeholder="Password"
+    />
+  </div>
+  <div class="input-wrapper radio-wrapper">
+    <input type="radio" class="radio" />
+    <label class="label"> Remember me </label>
+  </div>
+  <div class="button-wrapper">
+    <button type="submit" [disabled]="horizontalForm.invalid">Submit</button>
+    <button type="button">Cancel</button>
+  </div>
+</form>

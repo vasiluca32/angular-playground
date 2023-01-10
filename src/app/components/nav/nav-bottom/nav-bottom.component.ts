@@ -16,7 +16,7 @@ export class NavBottomComponent implements OnInit {
   data: any = [];
   activeTitle: string = '';
 
-  toggleStatus: any;
+  toggleStatus: any = true;
   innerWidth: any;
 
   constructor(private linkService: NavBottomLinksService, private toggleService: NavToggleService) { }

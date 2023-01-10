@@ -5,4 +5,40 @@
     padding: 1.75rem 12% 1.75rem;
 }
 
-@media only screen and (max-width: 425px) {}
+.stat {
+    width: 100%;
+    margin: 0 auto 1rem;
+    max-width: 575px;
+}
+
+@media only screen and (min-width: 575px) {
+    .stat {
+        max-width: 515px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .wrapper {
+        justify-content: center;
+    }
+
+    .stat {
+        flex: 276px;
+        max-width: 276px;
+        margin: 0 .5rem 1rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .stat {
+        max-width: 175px;
+        margin: 0 .4rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .stat {
+        max-width: 215px;
+    }
+}
